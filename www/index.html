@@ -217,9 +217,16 @@
             active = false;
             alarm();
           }
+          if(rest <= period){
+            $("body").css("background-color", "lightgreen");
+            if(rest <= 2*period /3){
+              $("body").css("background-color", "yellow");
+              if(rest <= period / 4){
+                $("body").css("background-color", "red");
+              }
+            }
+          }
         }
-
-        
     }
 
   </script>
